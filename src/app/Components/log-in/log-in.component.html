@@ -1,0 +1,39 @@
+<div class="container rounded">
+    <form class="border rounded p-3" [formGroup]="addForm1" (ngSubmit)="LogIn()">
+      <div class="row g-0">
+        <div class="col text-center mb-3 p-2 bg-light rounded">
+          <span class="fs-3">LOG IN</span>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col">
+          <div class="form-group">
+            <label class="form-label">EMAIL :</label>&nbsp;
+            <input class="form-control" type="email" formControlName="email" />
+          </div>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col">
+          <div class="form-group">
+            <label class="form-label">PASSWORD :</label>&nbsp;
+            <input
+              class="form-control"
+              type="password"
+              formControlName="password"
+            />
+          </div>
+        </div>
+      </div>
+  
+      <div class="row m-6">
+        <div class="col-8 offset-2">
+          <div class="d-grid">
+            <input class="button" type="submit" value="Proceed" />
+          </div>
+          <a routerLink="/reg" class="newCus"><p class="text-black"><b>New Customer? Register Here</b>  </p></a>
+        </div>
+      </div>
+    </form>
+  </div>
+  

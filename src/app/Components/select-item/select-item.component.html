@@ -1,0 +1,90 @@
+<div class="container">
+  <div class="row mt-3">
+    <div class="col">
+      <div class="dropdown col-md-5 my-2 my-sm-0">
+        <button class="btn btn-dark" type="submit">Sort by price</button>
+        <div class="dropdown-content">
+          <a class="cursor" *ngFor="let item of dropdownArr"
+            ><span (click)="sortItem($event)">{{ item }}</span></a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="body">
+        <div class="searchBox">
+          <input
+            type="text"
+            class="searchText"
+            placeholder="Type to search"
+            type="text"
+            [(ngModel)]="searchVal"
+          />
+          <div class="searchBtn">
+            <fa-icon [icon]="fire" class="fa-1x"></fa-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="">
+  <h1 class="menu">Grab your Meal!!!</h1>
+  <div class="logo">
+    <fa-icon [icon]="logo" class="fa-1x"></fa-icon>
+  </div>
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="contentt">
+        <p>Everyone has taste, even if they don't realize it. Even if you're not a great chef, there's 
+          nothing to stop you understanding the difference between what tastes good and what doesn't.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container mb-4 mt-4">
+    <div class="food-card">
+      <div class="row mx-5">
+        <div
+          id="food-category-card"
+          class="col-md-4 mb-5"
+          *ngFor="let v of obj1.sub1"
+        >
+          <div
+            *ngIf="
+              searchVal === '' ||
+              v.plate.toLowerCase().includes(searchVal.toLowerCase())
+            "
+          >
+            <div class="pad">
+              <div class="card" style="width: 18rem">
+                <img src="{{ v.imgP }}" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h2 class="card-title">{{ v.plate }}</h2>
+                  <p class="card-text" style="font-weight: bolder">
+                    Price:- ₹{{ v.price }}
+                  </p>
+                  <a
+                    class="btn btn-secondary details"
+                    routerLink="/item/{{ obj.id }}/{{ obj1.sub_id }}/{{
+                      v.Dish_id
+                    }}"
+                  >
+                    Go details</a
+                  >
+                  <a (click)="addtocart(v)">
+                    <fa-icon
+                      [icon]="cartSign"
+                      class="fa-2x cartDesign"
+                    ></fa-icon
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

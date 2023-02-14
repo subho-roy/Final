@@ -1,0 +1,27 @@
+<!-- <p>item works!</p> -->
+<!-- <br /><br /><br /><br /><br /><br /> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-5 offset-1">
+      <img class="image" src="{{ item_obj.imgP }}" alt="" />
+    </div>    
+    <div class="col-5 offset-1">
+      <h1>{{ item_obj.plate }}</h1>
+      <p class="content">{{item_obj.desc}}</p>
+
+      <div class="price">
+        <h2>{{ item_obj.price | currency : "INR" : "symbol" }}</h2>
+      </div>
+      <ngb-rating [max]="5" [readonly]="true" [rate]="item_obj.Rating" ></ngb-rating>
+      <h3> <b>Cooking Time :</b> {{item_obj.time}} Minutes</h3>
+      <div class="button" >
+        <div class="btn btn-success" (click)="addtocart(item_obj)" routerLink="/cart">add to cart</div>
+      </div>
+      
+      
+    </div>
+  </div>
+</div>
+
+

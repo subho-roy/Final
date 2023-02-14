@@ -1,0 +1,81 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid rgba(146, 36, 36, 0.854);
+    text-align: center;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  .dish-img{
+    height:20vh;
+    width:auto;
+  }
+ p{
+    margin-top: 30px;
+    text-align: right !important;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: larger;
+  }
+
+  .firstTable{
+    background-color: rgb(232, 202, 164);
+  }
+  .orders{
+    text-align: center;
+    font-size: xx-large;
+    font-style: italic;
+    font-family: cursive;
+  }
+  .logo{
+    text-align: center;
+    font-size: xx-large;
+    padding-bottom: 20px; 
+  }
+  .remove{
+    margin-top: 30px;
+    text-align: left;
+
+  }
+
+  .card{
+    height:60vh;
+    margin:25px;
+    padding:25px;
+  }
+
+  .center{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align:center;
+  }
+
+  .center img{
+    text-decoration: none;
+    color:inherit;
+    border:none;
+    outline:none;
+    height:162px;
+    width:250px;
+    margin:20px 0px;
+
+  }
+
+  h4,h6{
+    font-weight: 400;
+  }
+
+  .tax{
+    border-bottom: 1px solid black;
+    text-align: end;
+  }

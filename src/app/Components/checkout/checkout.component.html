@@ -1,0 +1,126 @@
+
+<!-- <div class="checkout">
+  <h1>Checkout</h1>
+  <div class="row">
+    <div class="col">
+        <h3>Add Shipping address</h3>
+        <form>
+          <input
+            type="text"
+            name="email"
+            class="form-input"
+            placeholder="enter user email"
+          />
+          <input
+            type="text"
+            name="address"
+            class="form-input"
+            placeholder="enter user address"
+          />
+          <input
+            type="text"
+            name="contact"
+            class="form-input"
+            placeholder="enter user contact"
+          />
+          <button class="form-button">Order Now</button>
+        </form>
+      </div>
+      <div class="col">
+        <h3>Total Amount : 50000</h3>
+        <h4>Payment Method : <b>Pay On Delivery</b></h4>
+      </div>
+  </div>
+  
+</div> -->
+<div class="container" *ngIf="!action" >
+
+  <form action="">
+
+      <div class="row">
+
+          <div class="col">
+
+              <h3 class="title">Delivery Address</h3>
+
+              <div class="inputBox">
+                  <span>full name :</span>
+                  <input type="text" placeholder="john deo">
+              </div>
+              <div class="inputBox">
+                  <span>email :</span>
+                  <input type="email" placeholder="example@example.com">
+              </div>
+              <div class="inputBox">
+                  <span>address :</span>
+                  <input type="text" placeholder="room - street - locality">
+              </div>
+              <div class="inputBox">
+                  <span>city :</span>
+                  <input type="text" placeholder="mumbai">
+              </div>
+
+              <div class="flex">
+                  <div class="inputBox">
+                      <span>state :</span>
+                      <input type="text" placeholder="india">
+                  </div>
+                  <div class="inputBox">
+                      <span>zip code :</span>
+                      <input type="text" placeholder="123 456">
+                  </div>
+              </div>
+
+          </div>
+
+          <div class="col">
+
+              <h3 class="title">payment</h3>
+
+              <div class="inputBox">
+                  <span>cards accepted :</span>
+                  <img src="assets/image/logo/images/card_img.jpg" alt="">
+              </div>
+              <div class="inputBox">
+                  <span>name on card :</span>
+                  <input type="text" placeholder="mr. john deo">
+              </div>
+              <div class="inputBox">
+                  <span>credit card number :</span>
+                  <input type="number" placeholder="1111-2222-3333-4444">
+              </div>
+              <div class="inputBox">
+                  <span>exp month :</span>
+                  <input type="text" placeholder="january">
+              </div>
+
+              <div class="flex">
+                  <div class="inputBox">
+                      <span>exp year :</span>
+                      <input type="number" placeholder="2022">
+                  </div>
+                  <div class="inputBox">
+                      <span>CVV :</span>
+                      <input type="text" placeholder="1234">
+                  </div>
+              </div>
+
+          </div>
+  
+      </div>
+
+      <input type="submit" value="proceed to pay" (click)="payment()"  class="submit-btn">
+
+  </form>
+
+</div>    
+
+
+<div class="container1">
+  <div class="popup" [class.open-popup]="action " >
+    <img src="assets/image/logo/images/404-tick.png" alt="">
+    <h2>Thank You!</h2>
+    <p>Your Order has been Placed</p>
+      <button type="button" (click)="close()">ok</button>
+   </div>
+</div>

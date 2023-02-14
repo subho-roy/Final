@@ -1,0 +1,164 @@
+<div class="gap">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top col">
+    <div class="container-fluid">
+      <!-- <a class="navbar-brand" href="#">Fixed navbar</a> -->
+      <a routerLink="/cuis">
+        <img src="assets\image\logo\Logo Flame.jpg" class="image" alt="logoImg" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/cuis">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="#">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a
+            type="button"
+          class="btn"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal" 
+              class="nav-link" 
+              routerLink="/contact">
+              Contact
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/cart">Cart</a>
+          </li>     
+        </ul>
+  
+        <ul class="navbar-nav ms-auto mx-4">
+          <li *ngIf="isName()">
+            <h3 class="text-white" > Hello {{name}}</h3>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" routerLink="/reg" *ngIf="!islogout()" >SignUp</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" routerLink="/log" *ngIf="!islogout()" >LogIn</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/cuis" (click)="logout()" *ngIf="islogout()">LogOut</a>
+        </li> 
+        </ul>
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+        </form>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<!--/////////////// MODAL//////////////////////// -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">
+          Fill The Details
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col contact">
+              <h1>Contact Us</h1>
+              <div class="location">
+                <fa-icon [icon]="location" class="fa-1x icon"></fa-icon>
+                <span class="heading">Address</span>
+                <p class="middle">
+                  2/1/5 Abcdefghijkl, Sodepur,North 24 Paragana
+                </p>
+              </div>
+              <div class="location">
+                <fa-icon [icon]="phone" class="fa-1x icon"></fa-icon>
+                <span class="heading">Lets Talk</span>
+                <p>
+                  +91 9876543210, +91 9812345678
+                </p>
+              </div>
+              <div class="location">
+                <fa-icon [icon]="mail" class="fa-1x icon"></fa-icon>
+                <span class="heading">Email Us</span>
+                <p>
+                  flameon234@gmai.com
+                </p>
+              </div>
+              <div class="location">
+                <fa-icon [icon]="mail" class="fa-1x icon"></fa-icon>
+                <span class="heading">Visit Us</span>
+                <p>
+                  http://localhost:4200/cuis
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="form">
+          <form>
+            <h2>Send Us a Message</h2>
+            <input
+              class="form-control"
+              type="text"
+              name=""
+              id=""
+              placeholder="Enter Your Name"
+            />
+            <input
+              class="form-control"
+              type="email"
+              placeholder="Enter Your Email"
+            />
+            <textarea class="form-control text" rows="4" cols="50" placeholder="Describe yourself here..."></textarea>
+          </form>
+        </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+          Save changes
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

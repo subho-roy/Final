@@ -1,0 +1,75 @@
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assets/image/banner/sub-cuis.jpg" class="d-block w-100" alt="sub-cuis image">
+      <div class="carousel-caption d-none d-md-block heading">
+        <h2>Discover</h2>
+        <h1>Our menu</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div>
+      <div class="text-center">
+        <p class="heading--subtitle">
+          Taste The Best
+        </p>
+        <h2 class="heading--title">Fresh Ingredients, Tasty Meals</h2>
+        <div class="head">
+          <div class="logo">
+            <fa-icon [icon]="fire" class="fa-1x"></fa-icon>
+          </div>
+        </div>
+        <p class="heading--desc about">
+          Everyone has taste, even if they don't realize it. Even if you're not a great chef, there's nothing to stop you understanding the difference between what tastes good and what doesn't.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container  mb-4 mt-4">
+    <!-- <div class="form mb-5 mt-5">
+      <div class="search">
+        <div class="form-group">
+          <label class="form-label">SEARCH YOUR ITEM:</label>
+          <input
+            class="form-control"
+            type="text"
+            name=""
+            id=""
+            [(ngModel)]="searchVal"
+          />
+        </div>
+      </div>
+    </div> -->
+    <div class="row gx-5">
+      <div class="col-md-4 mb-5" *ngFor="let v of obj.Sub">
+        <!-- <div *ngIf="searchVal === '' || v.sub_category.toLowerCase().includes(searchVal.toLowerCase())"> -->
+          <div class="pad">
+            <div>
+              <div class="card" style="width: 18rem">
+                <img src="{{ v.imgC }}" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">{{ v.sub_category}}</h5>
+                  <h5 class="card-desc">{{ v.desc}}</h5>
+                  <a
+                    class="btn btn-secondary details"
+                    routerLink="/select/{{obj.id}}/{{v.sub_id}}"
+                    >Quick View</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- </div> -->
+      </div>
+    </div>
+</div>
+
+
+
+

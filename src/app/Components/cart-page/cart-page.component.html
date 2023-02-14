@@ -1,0 +1,68 @@
+<div class="container" *ngIf="arr.length != 0">
+  <h1 class="orders"><u>Your Orders</u></h1>
+  <div class="logo">
+    <fa-icon [icon]="fire" class="fa-1x"></fa-icon>
+  </div>
+  <div class="row firstTable">
+    <table>
+      <tr>
+        <th>Dish id</th>
+        <th>dishname</th>
+        <th>Price</th>
+        <th>image</th>
+        <th>Remove</th>
+      </tr>
+      <tr *ngFor="let v of arr; let i = index">
+        <td>{{ v.dishId }}</td>
+        <td>{{ v.plateName }}</td>
+        <td>{{ v.Price }}</td>
+        <td><img class="dish-img" src="{{ v.image }}" alt="" /></td>
+
+        <td>
+          <button class="btn btn-danger" (click)="removeItem(i, v)">
+            <fa-icon [icon]="trash"></fa-icon>
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <a routerLink="/checkout">
+        <button class="btn btn-primary remove">Proceed</button>
+      </a>
+    </div>
+    <div class="col">
+      <div>
+        <p class="total">
+          Total Item Price :{{ total | currency : "INR" : "symbol" }}
+        </p>
+      </div>
+      <div class="tax">
+        <p>Taxes :{{ tax | currency : "INR" : "symbol" }}</p>
+      </div>
+      <div>
+        <p>
+          <b
+            >total amount to pay :
+            {{ total + tax | currency : "INR" : "symbol" }}
+          </b>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <a routerLink="/cuis"><button class="btn btn-primary">Add More</button></a> -->
+<div class="container" *ngIf="arr.length == 0">
+  <div class="card">
+    <h3 class="card-title"><b> My Cart</b></h3>
+  </div>
+  <div class="center">
+    <img src="assets/image/logo/images/images.png" alt="" />
+    <h4>Your Cart is empty !</h4>
+    <h6>Add food items</h6>
+    <button class="btn btn-primary" (click)="order()">Order Now</button>
+  </div>
+</div>

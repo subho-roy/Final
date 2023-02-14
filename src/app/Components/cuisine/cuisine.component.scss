@@ -1,0 +1,162 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+.card-img-top {
+  height: 42vh !important;
+}
+.card-body {
+  height: 250px;
+}
+
+
+h1{
+  // font-weight:300;
+  font-size: 70px;
+  font-family: cursive;
+  font-style: italic;
+  font-weight: 200;
+  margin-bottom: 40px;
+  
+}
+h2 {
+  text-align: center;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 25px;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+h4 {
+  text-align: center;
+  font-family: monospace;
+  font-style: italic;
+  color: rgba(155, 120, 95, 0.653);
+}
+h3{
+  text-align: center;
+  font-size: 50px;
+  font-family: cursive;
+  font-style: italic;
+}
+.banner-quote{
+  font-size: medium;
+  color: rgb(112, 196, 196);
+  font-family: cursive;
+  font-weight:bold;
+}
+.card-title {
+  font-family: cursive;
+  font-style: italic;
+  color: black !important;
+}
+.card {
+  border: none;
+}
+.card-text {
+  font-weight: lighter;
+}
+
+.carousel-inner {
+  height: 90vh;
+}
+.carousel-caption {
+  padding-bottom: 15rem !important;
+}
+
+.cardDiv {
+  position: relative;
+  top: -70px;
+  left:-20px;
+}
+.dishes {
+  height: 360px;
+}
+.main{
+  padding-bottom: 100px;
+}
+.head {
+  margin-bottom: 100px;
+}
+.banner-block {
+  margin-bottom: 50px;
+}
+.banner-pic{
+  height:100vh
+}
+
+.card-body {
+  background-color: bisque;
+}
+.bi-fire{
+  font-size:xx-large;
+}
+.about{
+  // display: flex;
+  // text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 16px;
+  font-family: raleway,sans-serif;
+    color: #666;
+    font-weight: 400;
+    line-height: 24px;
+}
+.about1{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+// .butto{
+  
+// }
+.service{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top:20px;
+  // padding-bottom: 40px;
+  font-size: 20px;
+  font-family: cursive;
+    color: #666;
+    font-weight: 200;
+    line-height: 24px;
+}
+.banner{
+  margin-bottom: 50px;
+  margin-left: 50px;
+}
+.banner-heading{
+  font-size: 30px;
+  color: black;
+  margin-top: 10px;
+  font-family: cursive;
+  
+}
+// .fast{
+//   height:10%
+// }
+
+// .banner-img {
+// height:10vh;
+// }
+.bann{
+  max-height:350px;
+  max-width: 320px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+// .bann3{
+//   margin-left: -20px;
+//   max-height:247px;
+//   max-width: 370px;
+// }
+
+.cont{
+  font-style: italic;
+  color: rgba(132, 14, 14, 0.589);
+}
+
+a{
+  color: black;
+  ;
+}
+.carou{
+  margin-top: -50px;
+}
