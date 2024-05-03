@@ -64,7 +64,7 @@
       </div>
     </form>
   </div> -->
- <div class="container">
+<div class="container">
   <head>
     <title class="title">Registration Form</title>
   </head>
@@ -72,11 +72,7 @@
     <div class="main">
       <div class="example">
         <h2>Register Here</h2>
-        <form
-          id="register"
-          [formGroup]="addForm"
-          (ngSubmit)="submit()"
-        >
+        <form id="register" [formGroup]="addForm" (ngSubmit)="submit()">
           <label>First Name: </label>
           <br />
           <input
@@ -85,8 +81,7 @@
             id="name"
             name="fname"
             placeholder="Enter your first name"
-            ngModel
-            formControlName="first_name"            
+            formControlName="first_name"
           />
           <br /><br />
           <label>Last Name: </label>
@@ -97,7 +92,6 @@
             id="name"
             name="lname"
             placeholder="Enter your Last name"
-            ngModel
             formControlName="last_name"
           />
           <br /><br />
@@ -109,7 +103,6 @@
             name="email"
             id="name"
             placeholder="Enter your valid email"
-            ngModel
             formControlName="email"
           />
           <br /><br />
@@ -121,31 +114,22 @@
             name="password"
             id="name"
             placeholder="Enter Password"
-            ngModel
             formControlName="password"
           />
           <br /><br />
 
           <label class="form-label">PROFILE PIC :</label>&nbsp;
-            <input
-              type="file"
-              formControlName="profile_pic"
-              (change)="onFileSelected($event)"
-            />
-            <br /><br />
+          <input
+            type="file"
+            formControlName="profile_pic"
+            (change)="onFileSelected($event)"
+          />
+          <br /><br />
           <div class="submitbtn">
-            <input
-              type="submit"
-              value="Submit"
-              name="submit"
-              id="submit"
-            />
+            <input type="submit" value="Submit" name="submit" id="submit" />
           </div>
         </form>
       </div>
     </div>
   </body>
-  
-  
- </div>
-  
+</div>
